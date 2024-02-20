@@ -20,3 +20,14 @@ $ git push -u origin(github仓库别名)  dev(本地分支名称)
 
 从github下载到本地
 $ git clone https://github.com/ougitnow/gitStudy.git
+
+
+解决冲突
+工具beyondcompare
+配置:
+1.$ git config --local merge.tool bc3
+2.$ git config --local mergetool.bc3.path 'D:\github\beyondcompare\BCompare.exe'(工具地址)
+3.$ git config --local mergetool.keepBackup false
+
+执行下面命令,启动工具beyondcompare解决冲突
+$ git mergetool
