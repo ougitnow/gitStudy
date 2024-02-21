@@ -1,0 +1,33 @@
+git命令:
+git status 查看文件所在的区域
+git add .   将工作区的文件移动到暂存区
+git commit -m '版本1' 将文件移动到版本库
+git log 查看提交的版本
+git reset --hard 版本号 回滚之前的版本号
+git reflog 查看提交回滚的历史记录
+git reset --hard 版本号 回滚之后的版本号
+
+git branch 查看当前的分支
+git branch 分支名称
+git switch/checkout branch 切换分支
+git merge 分支名称 (合并之前必须切换到需要合并的分支上)
+git branch -d 分支名称
+
+从本地上载到github
+$ git remote add origin(github仓库别名) https://github.com/ougitnow/gitStudy.git(github仓库网址)
+$ git push -u origin(github仓库别名)  master(本地分支名称)
+$ git push -u origin(github仓库别名)  dev(本地分支名称)
+
+从github下载到本地
+$ git clone https://github.com/ougitnow/gitStudy.git
+
+
+解决冲突
+工具beyondcompare
+配置:
+1.$ git config --local merge.tool bc3
+2.$ git config --local mergetool.bc3.path 'D:\github\beyondcompare\BCompare.exe'(工具地址)
+3.$ git config --local mergetool.keepBackup false
+
+执行下面命令,启动工具beyondcompare解决冲突
+$ git mergetool
